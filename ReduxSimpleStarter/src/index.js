@@ -7,7 +7,10 @@ import ReactDOM from 'react-dom';
 // IMPORT SEARCHBAR
 import SearchBar from './components/search_bar';
 
-const API_KEY = 'AIzaSyDIkfflCWAPULhAZ4kKl2EMR0AyuEuCfMU';
+// IMPORT CONFIG
+import { myConfig } from './components/config';
+
+const API_KEY = myConfig.API_KEY;
 
 // CREATE A NEW COMPONENT. THIS COMPONENT SHOULD PRODUCE HTML
 const App = () => {
