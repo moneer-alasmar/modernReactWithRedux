@@ -7,6 +7,9 @@ import ReactDOM from 'react-dom';
 // IMPORT SEARCHBAR
 import SearchBar from './components/search_bar';
 
+// IMPORT VIDEO LIST
+import VideoList from './components/video_list';
+
 // IMPORT CONFIG
 import { myConfig } from './components/config';
 
@@ -30,6 +33,7 @@ class App extends Component {
     return (
     <div>
       <SearchBar />
+      <VideoList videos={this.state.videos} />
     </div>
     );
   }
