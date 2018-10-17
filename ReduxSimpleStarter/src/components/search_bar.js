@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { myConfig } from './config';
+
+const API_KEY = myConfig.API_KEY;
 
 // FUNCTION BASEDC COMPONENT
 // const SearchBar = () => {
@@ -7,14 +10,18 @@ import React, { Component } from 'react';
 
 // CLASS BASED COMPONENT
 class SearchBar extends Component {
-  render() {
-    return <input onChange={event => console.log(event.target.value)} />;
-  }
+  constructor(props) {
+    super(props);
 
-  // EVENT HANDLER
-  // handleInputChange(event) {
-  //   console.log(event.target.value);
-  // }
+    this.state = { term: '' };
+  }
+  render() {
+    return (
+      <div> 
+        <input onChange={event => this.setState({ term: event.target.value })} />
+      </div>
+    );
+  }
 }
 
 export default SearchBar;
