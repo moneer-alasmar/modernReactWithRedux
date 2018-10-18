@@ -16,6 +16,9 @@ import { myConfig } from './components/config';
 // IMPORT YOUTUBE-API-SEARCH
 import YTSearch from 'youtube-api-search';
 
+// IMPORT VIDEO DETAIL
+import VideoDetail from './components/video_detail';
+
 const API_KEY = myConfig.API_KEY;
 
 // CREATE A NEW COMPONENT. THIS COMPONENT SHOULD PRODUCE HTML
@@ -33,6 +36,7 @@ class App extends Component {
     return (
     <div>
       <SearchBar />
+      <VideoDetail video={this.state.videos[0]} />
       <VideoList videos={this.state.videos} />
     </div>
     );
