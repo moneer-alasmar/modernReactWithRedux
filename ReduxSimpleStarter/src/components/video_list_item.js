@@ -1,12 +1,12 @@
 import React from 'react';
 
-const VideoListItem = ({video}) => {
+const VideoListItem = ({video, onVideoSelect}) => {
   // !!!IN THE ABOVE FUNCTION CALL, WE CAN PASS A PARAMETER AS AN OBJECT WITH A VALUE INSTEAD OF DOING THE BELOW!!!
   // const video = props.video;
   const imageUrl = video.snippet.thumbnails.default.url;
 
   return ( 
-    <li className="list-group-item">
+    <li onClick={() => onVideoSelect(video)} className="list-group-item">
       <div className="video-list media">
         <div className="media-left">
           <img className="media-object" src={imageUrl} />
