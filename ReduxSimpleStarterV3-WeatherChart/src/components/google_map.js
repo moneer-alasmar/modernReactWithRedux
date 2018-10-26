@@ -6,10 +6,11 @@ class GoogleMap extends Component {
       zoom: 12,
       center: {
         lat: this.props.lat,
-        long: this.props.lon
+        lng: this.props.lon
       }
     });
   }
+  
   render() {
     return <div ref="map" />;
   }
