@@ -2,14 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    // THIS IS THE ONLY TIME WE DO A DIRECT ASSIGNMENT TO THIS.STATE
-    this.state = {
-      lat: null,
-      errorMessage: ""
-    };
-  }
+  state = { lat: null, errorMessage: "" };
 
   componentDidMount() {
     // Geolocation API takes in 2 call backs, the first for successful and the second for failure.
