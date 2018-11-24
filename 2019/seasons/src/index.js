@@ -9,15 +9,12 @@ class App extends React.Component {
       lat: null,
       errorMessage: ""
     };
+  }
 
+  componentDidMount() {
     // Geolocation API takes in 2 call backs, the first for successful and the second for failure.
     window.navigator.geolocation.getCurrentPosition(
-      // Success Callback
-      position => {
-        // ALWAYS USE SET STATE TO UPDATE STATE
-        this.setState({ lat: position.coords.latitude });
-      },
-      // Failure Callback
+      position => this.setState({ lat: position.coords.latitude }),
       err => this.setState({ errorMessage: err.message })
     );
   }
