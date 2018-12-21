@@ -6,7 +6,7 @@ const VideoList = ({ videos }) => {
     return <VideoItem video={video} />;
   });
   // props.videos : our Array of Videos from our API request
-  return <div>{renderedList}</div>;
+  return <div className="ui relaxed divided list">{renderedList}</div>;
 };
 
 export default VideoList;
